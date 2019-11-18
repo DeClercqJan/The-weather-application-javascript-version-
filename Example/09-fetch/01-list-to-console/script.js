@@ -21,10 +21,13 @@
 // Run live preview of index.html and check console when clicking on button
 
 async function test() {
-    await fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fac9676aa8de6252977e1a8672e861e2")
+    // await fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fac9676aa8de6252977e1a8672e861e2")
+    // await fetch("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22")
+    await fetch("https://api.openweathermap.org/data/2.5/weather?q=Gent,be&appid=fac9676aa8de6252977e1a8672e861e2")
     .then(ste => ste.json())
     .then(result => {
         console.log(result)
+        console.log(result.city)
     })
 }
 document.getElementById("run").addEventListener("click",test)
