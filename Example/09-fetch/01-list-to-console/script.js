@@ -21,7 +21,7 @@
 // Run live preview of index.html and check console when clicking on button
 
 async function test() {
-    await fetch("http://localhost:3000/heroes")
+    await fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fac9676aa8de6252977e1a8672e861e2")
     .then(ste => ste.json())
     .then(result => {
         console.log(result)
