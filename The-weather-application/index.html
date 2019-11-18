@@ -12,29 +12,84 @@
     <!-- probably need to add more to head (description, author ...) + restructure (location script?)-->
 </head>
 
-<body >
+<body>
     <header>
-        <h1>The weather tomorrow today, with Nao and Jan</h1>
+        <img class="header_pics" src="images/nao.jpg">
+        <h1>The weather tomorrow today<br> with Nao and Jan</h1>
+        <img class="header_pics" src="images/jan.jpg">
     </header>
     <main>
         <article>
-            <h2>Get a 5-day foreceast for your town </h2>
-            <p>Fill out the form below and press the button to get the forecast</p>
-            <form>
-                <form>
-                    <fieldset>
-                        <legend>Choose the town you want to have a forecast for</legend>
-                        <p>
-                            <input type="text" name="input_field_name" id="input_field" value="enter your city here" />
-                            <label for="input_field">Your city</label>
-                            <input type="submit" value="submit">
-                    </fieldset>
-                </form>
-            </form>
+            <section class="containing_section">
+                <section class="top_section">
+                    <h2>Get a 5-day foreceast for your town </h2>
+                    <p>Fill out the form below and press the button to get the forecast</p>
+                </section>
+                <section class="middle_section">
+                    <form>
+                        <fieldset>
+                            <legend>Choose the town you want to have a forecast for</legend>
+                            <p>
+                                <label for="input_field">Your city</label>
+                                <input type="text" name="input_field_name" id="input_field"
+                                    value="enter your city here" />
+                                <input type="submit" value="submit">
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+                <section class="bottom_section">
+                    <table>
+                        <caption>Forecast for X for the next X days</caption>
+                        <thead>
+                            <tr>
+                                <th>Town</th>
+                                <th>Forecast</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Body content 1</td>
+                                <td>Body content 2</td>
+
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Body content 1</td>
+                                <td>Body content 2</td>
+
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Body content 1</td>
+                                <td>Body content 2</td>
+
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Body content 1</td>
+                                <td>Body content 2</td>
+
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Body content 1</td>
+                                <td>Body content 2</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
         </article>
     </main>
     <footer>
-
+        <p>placeholder</p>
     </footer>
 </body>
+
 </html>
