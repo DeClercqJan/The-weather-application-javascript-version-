@@ -1,0 +1,17 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+header {
+    height: 200px;
+    
+}
+main {
+    height: 500px;
+}
+footer {
+    height: 100px;
+}
