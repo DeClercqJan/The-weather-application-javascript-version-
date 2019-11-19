@@ -6,9 +6,29 @@ function change_table () {
   console.log(table);
   table_html = table[0].innerHTML;
   console.log(table_html);
+  weather_array = [];
+  date_array = [];
   forecast_array.forEach(element => {
-    console.log(element);
-    console.log(element.weather[0].description);
+    // console.log(element);
+    // console.log(element.weather[0].description);
+    // console.log(element.dt_txt);
+    if (element.dt_txt.includes("12:00:00")) {
+      console.log(element)
+      // console.log(element.dt_txt);
+      console.log(element.weather[0].description);
+      weather = element.weather[0].description;
+      weather_array.push(weather);
+      date = element.dt_txt.split(" ");
+      console.log(date[0]);
+      date_array.push(date[0]);
+    }
+console.log(date_array);
+console.log(weather_array);
+for (i = 0; i < date_array.length; i++) {
+  // for needs to be 1
+  document.getElementById(`table_row_${i+1}`).innerHTML = `<td>${date_array[i]}</td>
+  <td>${weather_array[i]}</td>`
+}
 });
 console.log(all_data.city.name);
 document.getElementById("town").innerHTML = all_data.city.name;
