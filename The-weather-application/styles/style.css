@@ -1,3 +1,5 @@
+/* (dark) colors to use, if needed 0d5c63 + 247b7b */
+
 * {
   box-sizing: border-box;
   border: 1px solid black;
@@ -13,7 +15,10 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
+  background-color: #78cdd7;
+  color: #fffffa;
 }
+
 header {
   /* background-color: blue; */
   width: 100%;
@@ -21,6 +26,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #44a1a0;
 }
 
 .header_pics {
@@ -87,7 +93,7 @@ article {
 }
 
 .bottom_section {
-  display: block;
+  display: àblock;
   width: 100%;
   height: 50%;
   display: flex;
@@ -122,4 +128,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  background-color: #44a1a0;
+}
+footer > * {
+  width: 100%;
 }
