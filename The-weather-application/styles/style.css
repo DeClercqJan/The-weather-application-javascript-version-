@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 html {
@@ -36,7 +36,6 @@ header {
     .header_pics {
         display: block;
         height: 100%;
-        weight: 100%;
         border-radius: 50%;
         padding: 1em;
       }
@@ -62,6 +61,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid black; */
 }
 
 @media only screen and (min-width : 768px) {
@@ -71,39 +71,61 @@ article {
 }
 
 .containing_section {
-  width: 75%;
-  height: 75%;
+  align-self: flex-start;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* border: 1px solid black; */
+
 }
+
+@media only screen and (min-width : 768px) {
+  .containing_section {
+      width: 75%;
+  }
+  }
 
 .top_section {
   display: block;
   width: 100%;
   height: 25%;
+  /* border: 1px solid black; */
+
 }
 
 .middle_section {
   display: block;
   width: 100%;
-  height: 25%;
+  height: 13%;
   align-items: space-evenly;
+  /* border: 1px solid black; */
+
 }
 
 .bottom_section {
-  display: àblock;
+  display: block;
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid black; */
+}
 
+.containing_section section {
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 h2 {
   font-size: 1.5em;
+  padding: 0.5em;
+}
+
+p {
   padding: 0.5em;
 }
 
@@ -113,8 +135,18 @@ form {
 }
 
 form > * {
-    padding: 1em;
+    padding: 0.5em;
 }
+
+#table_legend {
+  display: none;
+}
+
+@media only screen and (min-width : 768px) {
+  #table_legend {
+      display: inline;
+  }
+  }
 
 tr,
 th,

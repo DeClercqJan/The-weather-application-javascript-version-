@@ -1,8 +1,7 @@
 There are multiple methods (GET/POST...)
 
-style: flashy?
-
-table? dates + wheather temperature, wind ...
+style: flashy? check other weather apps
+-> table? dates + wheather temperature, wind ...
 graph????
 
 geolocation: 
@@ -11,3 +10,12 @@ geolocation:
 google maps??
 
 put the whole thing online
+
+verschilende functies aanpassen zodat het gelijk manipuleert
+
+david: neem telkens de temperatuur van omstreeks 12 u.
+still an error in desktop version: lower section doens't fit container
+
+nog aanpassen dat het de value van de input field pakt
+
+problemen met text-overflow (solution: hiding some stuff on mobile)
