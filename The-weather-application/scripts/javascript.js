@@ -1,6 +1,6 @@
 forecast_array = [];
 
-function change_table () {
+function change_table() {
   console.log("test change table");
   table = document.getElementsByTagName("table");
   console.log(table);
@@ -13,7 +13,7 @@ function change_table () {
     // console.log(element.weather[0].description);
     // console.log(element.dt_txt);
     if (element.dt_txt.includes("12:00:00")) {
-      console.log(element)
+      console.log(element);
       // console.log(element.dt_txt);
       console.log(element.weather[0].description);
       weather = element.weather[0].description;
@@ -22,32 +22,41 @@ function change_table () {
       console.log(date[0]);
       date_array.push(date[0]);
     }
-console.log(date_array);
-console.log(weather_array);
-for (i = 0; i < date_array.length; i++) {
-  // for needs to be 1
-  document.getElementById(`table_row_${i+1}`).innerHTML = `<td>${date_array[i]}</td>
-  <td>${weather_array[i]}</td>`
-}
-});
-console.log(all_data.city.name);
-document.getElementById("town").innerHTML = all_data.city.name;
+    console.log(date_array);
+    console.log(weather_array);
+    for (i = 0; i < date_array.length; i++) {
+      // for needs to be 1
+      document.getElementById(
+        `table_row_${i + 1}`
+      ).innerHTML = `<td>${date_array[i]}</td>
+  <td>${weather_array[i]}</td>`;
+    }
+  });
+  console.log(all_data.city.name);
+  document.getElementById("town").innerHTML = all_data.city.name;
 }
 
-function isFloat(x) { return !!(x % 1); }
+function isFloat(x) {
+  return !!(x % 1);
+}
 
 async function fetch_coordinates() {
-    // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon} 
-    await fetch (`https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude_to_fixed}_&lon=${my_position_latitude_float}&appid=fac9676aa8de6252977e1a8672e861e2`)
+  // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}
+  console.log(
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude}&lon=${my_position_longitude}&appid=fac9676aa8de6252977e1a8672e861e2`
+  );
+  await fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude}&lon=${my_position_longitude}&appid=fac9676aa8de6252977e1a8672e861e2`
+  )
     .then(ste => ste.json())
     .then(result => {
-        console.log(result)
-        all_data = result;  
-        forecast_array = result.list;
-        // console.log(result.city)
-        // console.log(result.list)
-        // console.log(result.list.weather);
-        /*
+      console.log(result);
+      all_data = result;
+      forecast_array = result.list;
+      // console.log(result.city)
+      // console.log(result.list)
+      // console.log(result.list.weather);
+      /*
         
         result.list.forEach(element => {
             // console.log(element);
@@ -60,29 +69,17 @@ async function fetch_coordinates() {
 
     })
     */
-})
+    });
+  change_table();
 }
 
 function showPosition() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-        // getting "is not a float"-error from API
+      // getting "is not a float"-error from API
       console.log(position);
       my_position_longitude = position.coords.longitude;
-      //console.log(my_position_longitude);
-      my_position_longitude_string = my_position_longitude.toString();
-      my_position_longitude_float = parseFloat(my_position_longitude_string);
-      console.log(typeof my_position_longitude_float);
-      console.log(isFloat(my_position_longitude_float))
-      console.log(my_position_longitude_float);
       my_position_latitude = position.coords.latitude;
-      my_position_latitude_string = my_position_latitude.toString();
-      my_position_latitude_float = parseFloat(my_position_latitude_string);
-      console.log(typeof my_position_latitude_float);
-      console.log(isFloat(my_position_latitude_float))
-      console.log(my_position_latitude_float);
-      my_position_latitude_to_fixed = my_position_latitude_float.toFixed(6);
-      console.log(my_position_latitude_to_fixed);
       fetch_coordinates();
     });
   } else {
@@ -116,33 +113,37 @@ async function fetch_input() {
 }
 */
 
-var city = "Ghent";
-var country = "BE";
-var link = "https://api.openweathermap.org/data/2.5/forecast/?q=";
-var key = "fac9676aa8de6252977e1a8672e861e2";
-
-
-
 async function fetch_input() {
-  await fetch(link + city + "," + country + "&appid=" + key)
+  // var city = "Ghent";
+  // console.log(document.getElementById("input_field").value);
+  var city = document.getElementById("input_field_city").value;
+  // var country = "BE";
+  var country_input = document.getElementById("input_field_country").value;
+  var country = country_input.toUpperCase();
+  console.log(country);
+  var link = "https://api.openweathermap.org/data/2.5/forecast/?q=";
+  var key = "fac9676aa8de6252977e1a8672e861e2";
+
+  // THIJS: AWAIT DOESN'T DO ANYTHING: FETCH ALONE + THEN / OR: USE CONST VARIABLE WITH AWAIT FETCH (PROMISE?) . otherwise? code would run without making sense??
+  fetch(link + city + "," + country + "&appid=" + key)
     .then(element => element.json())
     .then(element => {
-all_data = element;
-      console.log(element)
+      all_data = element;
+      console.log(element);
       // console.log(result.city)
       // console.log(result.list)
       // console.log(result.list.weather);
       element.list.forEach(element => {
-          // console.log(element);
-          // console.log(element.weather)
-          // console.log(element.weather[0]);
-          // console.log(element.weather[0].main);
-          // console.log(element.weather[0].description);
+        // console.log(element);
+        // console.log(element.weather)
+        // console.log(element.weather[0]);
+        // console.log(element.weather[0].main);
+        // console.log(element.weather[0].description);
       });
       forecast_array = element.list;
-  })
+    });
   change_table();
 }
 
 // document.getElementById("submit").addEventListener("click", fetch_input)
-document.getElementById("run").addEventListener("click",fetch_input)
+document.getElementById("run").addEventListener("click", fetch_input);

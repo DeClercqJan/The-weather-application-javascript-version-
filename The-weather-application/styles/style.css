@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  border: 1px solid black; */
 }
 
 html {
@@ -91,17 +91,17 @@ article {
 .top_section {
   display: block;
   width: 100%;
-  height: 25%;
-  /* border: 1px solid black; */
+  height: 20%;
+  border: 1px solid black; */
 
 }
 
 .middle_section {
   display: block;
   width: 100%;
-  height: 13%;
+  height: 18%;
   align-items: space-evenly;
-  /* border: 1px solid black; */
+  border: 1px solid black; */
 
 }
 
@@ -112,18 +112,28 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
+    border: 1px solid black; */
 }
 
+
+
 .containing_section section {
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0.5em;
 }
+
+@media only screen and (min-width : 768px) {
+  h2 {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  }
+
 
 p {
   padding: 0.5em;
@@ -138,6 +148,36 @@ form > * {
     padding: 0.5em;
 }
 
+.middle_section {
+  display: flex;
+  justify-content: center;
+  /*border: 1px solid black; */
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width : 768px) {
+  fieldset {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  }
+  
+.middle_section div {
+  width: 100%;
+  height: 3em;
+  border: 1px solid black; */
+}
+
+button {
+  width: 100%;
+  height: 100%;
+}
+
 #table_legend {
   display: none;
 }
@@ -148,6 +188,7 @@ form > * {
   }
   }
 
+
 tr,
 th,
 td {
@@ -157,13 +198,27 @@ td {
 footer {
   /* background-color: purple; */
   width: 100%;
-  height: 10%;
+  height: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background-color: #44a1a0;
 }
-footer > * {
-  width: 100%;
+
+  footer span {
+display: none;
+  }
+
+@media only screen and (min-width : 768px) {
+footer {
+  height: 10%;
 }
+  footer > * {
+    width: 100%;
+  }
+  footer span {
+display: inline;
+  }
+  }
+

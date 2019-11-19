@@ -1,21 +1,31 @@
-There are multiple methods (GET/POST...)
 
-style: flashy? check other weather apps
--> table? dates + wheather temperature, wind ...
-graph????
 
+TO DO
+
+david: neem telkens de temperatuur van omstreeks 12 u.
+
+in manual toevoegen
 geolocation: 
 + add manual enter city for people who are interested in other location or don't want to share location
+
+
+
+still an error in desktop version: lower section doens't fit container
+
+problemen met text-overflow (solution: hiding some stuff on mobile)
+
+->zie ook dat er probleem is met positionering op mobiel: footer gaat niet helemaal tot beneden, terwijl er elders geen plek meer is (als ik dit oplos, los ik mogelijjk veel van mijn problemen op)
+
 
 google maps??
 
 put the whole thing online
 
-verschilende functies aanpassen zodat het gelijk manipuleert
 
-david: neem telkens de temperatuur van omstreeks 12 u.
-still an error in desktop version: lower section doens't fit container
+There are multiple methods (GET/POST...)
 
-nog aanpassen dat het de value van de input field pakt
 
-problemen met text-overflow (solution: hiding some stuff on mobile)
+NOT TO DO
+style: flashy? check other weather apps
+-> table? dates + wheather temperature, wind ...
+graph????
