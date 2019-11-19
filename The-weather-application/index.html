@@ -8,7 +8,6 @@
     <title>The weather tomorrow today, with Nao and Jan</title>
     <link rel="stylesheet" href="/styles/reset.css" class="style">
     <link rel="stylesheet" href="/styles/style.css" class="style">
-    <script type="text/javascript" src="/scripts/javascript.js"></script>
     <!-- probably need to add more to head (description, author ...) + restructure (location script?)-->
 </head>
 
@@ -23,7 +22,8 @@
             <section class="containing_section">
                 <section class="top_section">
                     <h2>Get a 5-day foreceast for your town </h2>
-                    <p>Accept the geolocation geolocation service prompted in your browsers to get the forecast based on your actual location</p>
+                    <p>Accept the geolocation geolocation service prompted in your browsers to get the forecast based on
+                        your actual location</p>
                     <p>Alternatively, you can manually enter the city</p>
                 </section>
                 <section class="middle_section">
@@ -34,8 +34,8 @@
                                 <label for="input_field">Your city</label>
                                 <input type="text" name="input_field_name" id="input_field"
                                     value="enter your city here" />
-                                <input type="submit" value="submit" id="submit" class="submit">
-                            </p>
+                                <!-- <input type="submit" value="submit" id="submit" class="submit"> -->
+                                <button type="button" id="run">Run the script</button>
                         </fieldset>
                     </form>
                 </section>
@@ -44,7 +44,7 @@
                         <caption>Forecast for X for the next X days</caption>
                         <thead>
                             <tr>
-                                <th>Town</th>
+                                <th id="town">Town</th>
                                 <th>Forecast</th>
                             </tr>
                         </thead>
@@ -95,6 +95,7 @@
             You can contact Jan De Clercq via <a href="mailto:declercqjan@gmail.com">declercqjan@gmail.com</a><br>
         </adress>
     </footer>
+    <script type="text/javascript" src="/scripts/javascript.js"></script>
 </body>
 
 </html>

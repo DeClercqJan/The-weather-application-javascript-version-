@@ -1,3 +1,19 @@
+forecast_array = [];
+
+function change_table () {
+  console.log("test change table");
+  table = document.getElementsByTagName("table");
+  console.log(table);
+  table_html = table[0].innerHTML;
+  console.log(table_html);
+  forecast_array.forEach(element => {
+    console.log(element);
+    console.log(element.weather[0].description);
+});
+console.log(all_data.city.name);
+document.getElementById("town").innerHTML = all_data.city.name;
+}
+
 function isFloat(x) { return !!(x % 1); }
 
 async function fetch_coordinates() {
@@ -6,10 +22,13 @@ async function fetch_coordinates() {
     .then(ste => ste.json())
     .then(result => {
         console.log(result)
+        all_data = result;  
+        forecast_array = result.list;
         // console.log(result.city)
         // console.log(result.list)
         // console.log(result.list.weather);
         /*
+        
         result.list.forEach(element => {
             // console.log(element);
             console.log(element.weather)
@@ -17,6 +36,7 @@ async function fetch_coordinates() {
             console.log(element.weather[0].main);
             console.log(element.weather[0].description);
         });
+
 
     })
     */
@@ -52,6 +72,7 @@ function showPosition() {
 
 window.onload = showPosition();
 
+/*
 async function fetch_input() {
   // standaarddata voor moskou await fetch("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=fac9676aa8de6252977e1a8672e861e2")
   // example await fetch("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22")
@@ -73,4 +94,35 @@ async function fetch_input() {
 
   })
 }
+*/
 
+var city = "Ghent";
+var country = "BE";
+var link = "https://api.openweathermap.org/data/2.5/forecast/?q=";
+var key = "fac9676aa8de6252977e1a8672e861e2";
+
+
+
+async function fetch_input() {
+  await fetch(link + city + "," + country + "&appid=" + key)
+    .then(element => element.json())
+    .then(element => {
+all_data = element;
+      console.log(element)
+      // console.log(result.city)
+      // console.log(result.list)
+      // console.log(result.list.weather);
+      element.list.forEach(element => {
+          // console.log(element);
+          // console.log(element.weather)
+          // console.log(element.weather[0]);
+          // console.log(element.weather[0].main);
+          // console.log(element.weather[0].description);
+      });
+      forecast_array = element.list;
+  })
+  change_table();
+}
+
+// document.getElementById("submit").addEventListener("click", fetch_input)
+document.getElementById("run").addEventListener("click",fetch_input)
