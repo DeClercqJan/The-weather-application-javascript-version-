@@ -7,6 +7,7 @@
 
 ## implementation
 - team project, but team mate fell ill early on
+- filtered api's response to only display the forecast for 12:00 noon
 
 ## to do's
 - clean up code
