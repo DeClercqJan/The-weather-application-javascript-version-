@@ -188,7 +188,9 @@ button {
   }
   }
 
-
+th {
+  font-weight: bold;
+}
 tr,
 th,
 td {

@@ -1,4 +1,4 @@
-
+! PROBLEMS WITH MERGING!
 
 TO DO
 
@@ -29,3 +29,12 @@ NOT TO DO
 style: flashy? check other weather apps
 -> table? dates + wheather temperature, wind ...
 graph????
+
+adding more icons, depending on possibilities of weather
+
+
+, in url voor api = or
+so you don't need to add country as input to request
+
+
+
