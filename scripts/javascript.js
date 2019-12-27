@@ -60,7 +60,7 @@ function change_table() {
       switch (weather) {
         case "broken clouds":
           icon =
-            "<img src='/images/weather_icons/iconmonstr-weather-8_brokenclouds.svg'>";
+            "<img src='./images/weather_icons/iconmonstr-weather-8_brokenclouds.svg'>";
           break;
           // TO DO: ADD LOTS OF ICONS DEPENDING ON POSSIBILITIES
       }
