@@ -1,4 +1,4 @@
-# The-weather-application-php-remake-
+# The-weather-application-javascript-version-
 
 ## basic idea
 - automatic forecast on basis of geolocation
