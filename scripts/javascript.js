@@ -93,7 +93,7 @@ async function fetch_coordinates() {
   // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}
   // console.log(  `https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude}&lon=${my_position_longitude}&appid=fac9676aa8de6252977e1a8672e861e2`);
   await fetch(
-    `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude}&lon=${my_position_longitude}&appid=fac9676aa8de6252977e1a8672e861e2`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${my_position_latitude}&lon=${my_position_longitude}&appid=fac9676aa8de6252977e1a8672e861e2`
   )
     .then(ste => ste.json())
     .then(result => {
@@ -168,7 +168,7 @@ async function fetch_input() {
   var country_input = document.getElementById("input_field_country").value;
   var country = country_input.toUpperCase();
   // console.log(country);
-  var link = "https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast/?q=";
+  var link = "https://api.openweathermap.org/data/2.5/forecast/?q=";
   var key = "fac9676aa8de6252977e1a8672e861e2";
 
   // THIJS: AWAIT DOESN'T DO ANYTHING: FETCH ALONE + THEN / OR: USE CONST VARIABLE WITH AWAIT FETCH (PROMISE?) . otherwise? code would run without making sense??
