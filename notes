@@ -1,0 +1,40 @@
+! PROBLEMS WITH MERGING!
+
+TO DO
+
+david: neem telkens de temperatuur van omstreeks 12 u.
+
+in manual toevoegen
+geolocation: 
++ add manual enter city for people who are interested in other location or don't want to share location
+
+
+
+still an error in desktop version: lower section doens't fit container
+
+problemen met text-overflow (solution: hiding some stuff on mobile)
+
+->zie ook dat er probleem is met positionering op mobiel: footer gaat niet helemaal tot beneden, terwijl er elders geen plek meer is (als ik dit oplos, los ik mogelijjk veel van mijn problemen op)
+
+
+google maps??
+
+put the whole thing online
+
+
+There are multiple methods (GET/POST...)
+
+
+NOT TO DO
+style: flashy? check other weather apps
+-> table? dates + wheather temperature, wind ...
+graph????
+
+adding more icons, depending on possibilities of weather
+
+
+, in url voor api = or
+so you don't need to add country as input to request
+
+
+
